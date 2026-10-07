@@ -242,13 +242,13 @@
                         <div class="book-icon">
                             <i class="fa-solid fa-book-open"></i>
                         </div>
-                        {{ $section[17]->value }}
+                        {!! $section[17]->value !!}
                     </div>
                     <div class="book-points wow fadeInRight" data-wow-delay="0.1s">
                         <div class="book-icon">
                             <i class="fa-solid fa-book-open"></i>
                         </div>
-                        {{ $section[18]->value }}
+                        {!! $section[18]->value !!}
                     </div>
                 </div>
             </div>

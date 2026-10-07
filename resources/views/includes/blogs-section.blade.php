@@ -1,10 +1,13 @@
+@php
+    $blog = DB::table('pages')->where('id', 3)->first();
+    @endphp
 <section class="blog-article">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
                 <div class="author-about">
-                    <h4 class="unique-style">{{$page->name}}</h4>
-                    {!! $page->content !!}
+                    <h4 class="unique-style">{{$blog->name}}</h4>
+                    {!! $blog->content !!}
                 </div>
             </div>
 
