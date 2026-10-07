@@ -1,0 +1,797 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(#e5b8b38f, #e5b8b38f), url("../images/cloud-banner.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+
+.btn-web {
+    color: #4d0d0e;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    border-radius: 8px 8px 8px 8px;
+    padding: 15px 25px 15px 25px;
+    background: #d49192;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+}
+
+.btn-web svg {
+    width: 15px;
+    fill: #4d0d0e;
+}
+
+.unique-style {
+    color: #4d0d0e;
+    font-family: 'Oswald';
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    border-radius: 8px 8px 8px 8px;
+    padding: 8px 15px 8px 15px;
+    background: #d49192;
+    font-size: 17px;
+    display: inline-block;
+}
+
+/* header css start */
+
+header {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+}
+
+a.navbar-brand {
+    padding: 0;
+}
+
+a.navbar-brand img {
+    width: 250px;
+    background: white;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+}
+
+nav.navbar.navbar-expand-lg {
+    padding: 0;
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.navbar-nav li a {
+    color: white !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+/* header css end */
+
+/* banner css start */
+
+.banner {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    height: 850px;
+    display: flex;
+    align-items: center;
+}
+
+.banner:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #000000c7;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-content {
+    text-align: center;
+}
+
+
+
+.banner-content h1 {
+    color: white;
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.banner-content p {
+    color: white;
+    font-size: 15px;
+    margin: 15px auto;
+    width: 55%;
+}
+
+.banner-content p.banner-para {
+    font-weight: 600;
+}
+
+/* banner css end */
+
+/* about-author css start */
+
+.about-author {
+
+    position: relative;
+
+    z-index: 1;
+
+    padding-bottom: 100px;
+}
+
+
+.boxes-banner {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: -100px;
+}
+
+.box-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 85px;
+    background: #d49192;
+    border-radius: 60%;
+    border: 5px solid white;
+    margin-top: -50px;
+}
+
+.box-img i {
+    color: white;
+    font-size: 30px;
+}
+
+.box-content h3 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.box-content p {
+    color: #656565;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.author-info .autho-banner {
+    margin-top: 250px;
+    width: 80%;
+}
+
+
+
+section.about-author:after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    background: #d49192;
+    left: 0;
+    top: 28%;
+    width: 44%;
+    height: 65%;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0 0 10px 1px #00000047;
+}
+
+img.img-fluid.bookcover {
+    position: absolute;
+    z-index: 10;
+    width: 300px;
+    right: 20px;
+    bottom: -110px;
+}
+
+.author-info {
+    position: relative;
+    z-index: 0;
+}
+
+.slider-review {
+    position: absolute;
+    z-index: 1;
+    bottom: -50px;
+    background: white;
+    width: 55%;
+    border-radius: 20px;
+    right: 280px;
+}
+
+.review-box i {
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+    margin-top: -30px;
+    background: white;
+}
+
+.slider-review .client-review.owl-carousel.owl-theme.owl-loaded.owl-drag {
+    padding: 20px;
+}
+
+
+.author-about h2 {
+    margin: 10px 0;
+    color: black;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.author-about p {
+    color: black;
+    font-size: 15px;
+    text-align: justify;
+    text-align-last: start;
+}
+
+.author-name {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-top: 1px solid black;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.author-about .unique-style {
+    font-size: 25px;
+}
+
+.author-name img {
+    width: 100px;
+    border-radius: 60%;
+    border: 2px solid black;
+}
+
+.author-name h5 {
+    font-family: "Lobster", sans-serif;
+    color: black;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.author-name h5 span {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.btn-web i {
+    background: #4d0d0e;
+    color: white;
+    border-radius: 60%;
+    font-size: 10px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* about-author css end */
+
+/* about-book css start */
+
+.about-book {
+    padding: 100px 0;
+    position: relative;
+    z-index: 0;
+    background-image: url(../images/banner.webp);
+    background-position: right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.about-book:before {
+    display: flex;
+    align-items: center;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: #000000b3;
+}
+
+
+.book-about p {
+    margin-bottom: 20px;
+}
+
+.book-about .author-name {
+    border: none;
+    padding-top: 0;
+}
+
+.logo-slides {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #d49192;
+    background: white;
+    width: 70%;
+}
+
+.logo-slides h5 {
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.logo-slides .logo-carousel.owl-carousel.owl-theme.owl-loaded.owl-drag {
+    background: #d49192;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.about-book-cover .author-name {
+    background: #ffffffe8;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0;
+    border: 3px solid #d49192;
+    gap: 10px;
+    width: 80%;
+    margin-left: auto;
+}
+
+.about-book-cover .author-name .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.about-book-cover .author-name .rating h6 {
+    color: #d49192;
+    font-size: 35px;
+    font-weight: 800;
+    font-family: 'Poppins';
+}
+
+.about-book-cover .author-name .rating p {
+    color: #d49192;
+    font-size: 12px;
+}
+
+.about-book-cover .author-name .rating p span {
+    display: block;
+}
+
+.about-book-cover .author-name .rating p i {
+    color: orange;
+    font-size: 7px;
+}
+
+.about-book-cover .author-name .rating i {
+    color: #d49192;
+    font-size: 40px;
+}
+
+.about-book-cover {
+    text-align: center;
+}
+
+.about-book-cover img {
+    width: 70%;
+    transform: rotate(-9deg);
+}
+
+/* about-book css end */
+
+/* video-banner css start */
+
+.video-banner {
+    margin-top: 80px;
+}
+
+/* video-banner css end */
+
+
+/* inside-book css start */
+
+.inside-book {
+    padding: 50px 0;
+}
+
+.inside-book .author-about {
+    text-align: center;
+}
+
+.inside-book .author-about p {
+    text-align-last: center;
+    text-align: unset;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.book-points {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.book-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #d49192;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 8px -8px 0px 0px rgba(108.8, 108.8, 108.8, 0.27);
+}
+
+.book-icon i {
+    transform: rotate(-45deg);
+    font-size: 25px;
+    color: #d49192;
+}
+
+.book-points h4 {
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.book-points p {
+    color: black;
+    font-weight: 400;
+}
+
+/* inside-book css end */
+
+
+/* testimonials css start */
+
+
+.testimonials {
+    padding: 100px 0;
+    position: relative;
+    z-index: 0;
+    background-image: url(../images/banner.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+}
+
+.testimonials:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #000000c7;
+    width: 100%;
+    height: 100%;
+}
+
+
+.testimonials .author-about {
+    text-align: center;
+}
+
+.testimonials .author-about h2 {
+    color: white;
+}
+
+.explore-review {
+    background: #d49192b5;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.explore-review p {
+    color: white;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.explore-review h5 {
+    color: white;
+    font-weight: 500;
+}
+
+.explore-review h5 span {
+    display: block;
+    font-weight: 400;
+}
+
+.owl-nav button {
+    position: absolute;
+    z-index: 0;
+    top: 40%;
+    font-size: 55px !important;
+    background-color: transparent !important;
+}
+
+.owl-nav button.owl-prev {
+    left: -40px;
+}
+
+.owl-nav button.owl-next {
+    right: -40px;
+
+}
+
+.owl-nav button span {
+    color: white !important;
+}
+
+/* testimonials css end */
+
+/* blog-article css start */
+
+
+.blog-article {
+    padding: 80px 0 150px 0;
+}
+
+.blog-article .author-about {
+    text-align: center;
+}
+
+.blog-main {
+    background: #d49192;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.blog-content h5 {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #4d0d0e;
+    border-radius: 60%;
+    color: white;
+    font-size: 14px;
+    padding-top: 9px;
+    margin-top: -20px;
+}
+
+.blog-img {
+    position: relative;
+    z-index: 0;
+}
+
+.blog-content {
+    position: relative;
+    margin-left: 20px;
+}
+
+.blog-content h3 {
+    color: #4d0d0e;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.blog-content p {
+    color: black;
+    font-size: 15px;
+    margin: 20px 0;
+    line-height: 26px;
+}
+
+
+.drk-btn {
+    background: #4d0d0e;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* blog-article css end */
+
+/* footer css start */
+
+
+footer {
+    padding: 100px 0 0 0;
+    background-image: url(../images/footer-banner.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+
+footer::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #d49192d1;
+    width: 100%;
+    height: 100%;
+}
+
+.newsletter-form {
+    background: black;
+    padding: 35px 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -180px;
+}
+
+.form-content {
+    width: 50%;
+}
+
+.form-field {
+    width: 50%;
+}
+
+
+.form-content h5 {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.form-content h3 {
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+
+.newsletter-form .form-group {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-form .form-group input {
+    height: 54px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.newsletter-form .form-group button {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.footer-content p {
+    color: #4d0d0e;
+    font-weight: 400;
+    margin: 10px 0;
+    width: 80%;
+}
+
+.footer-content .social-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-content .social-icon li a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60%;
+    background: #4d0d0e;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+}
+
+.footer-content {
+    margin-top: 50px;
+}
+
+.footer-content h5 {
+    color: #4d0d0e;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-content ul li {
+    padding: 5px 0;
+}
+
+.footer-content ul li a {
+    color: #4d0d0e;
+    font-weight: 500;
+}
+
+.footer-bottom {
+    background: black;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 80px;
+    border-top: 2px solid white;
+}
+
+.footer-bottom p {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.footer-content a img {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 60%;
+}
+/* footer css end */

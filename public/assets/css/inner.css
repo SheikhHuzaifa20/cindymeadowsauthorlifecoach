@@ -1,0 +1,223 @@
+.inner-banner {
+    height: 400px;
+}
+
+.inner-banner .banner-content h1 {
+    text-transform: uppercase;
+}
+
+.inner-author-about .author-info .autho-banner {
+    margin-top: 0;
+}
+
+.inner-author-about {
+    padding: 100px 0;
+}
+
+.innerbiography .author-about p {
+    text-align-last: center;
+}
+
+.inner-book-about {
+    margin: 80px 0;
+}
+
+.contact-pg {
+    padding: 150px 0;
+}
+
+.contact-info {
+    text-align: center;
+    margin: auto;
+    width: 75%;
+    background: #d49192;
+    height: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info a span {
+    font-weight: 500;
+    display: block;
+    font-size: 18px;
+}
+
+.contact-info a i {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: #4d0d0e;
+}
+
+.contact-form {
+    background: #d49192;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+.contact-form:before {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    left: 0;
+    top: 22%;
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+.contact-form h2 {
+    color: #4d0d0e;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.contact-form p {
+    color: #4d0d0e;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.contact-book-form form .form-control {
+    height: 50px;
+    margin-bottom: 25px;
+    border: 1px solid #69727d;
+}
+
+.contact-book-form form #textarea {
+    height: unset !important;
+}
+
+.contact-book-form button.btn.btn-web.drk-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.contact-form .contact-book-cover {
+    margin-top: 120px;
+}
+
+.blog-banner {
+    height: 500px;
+    background-position: center;
+}
+
+.blogs-inner {
+    padding: 100px 0 180px 0;
+}
+
+.main-blog-description {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.main-blog-description p {
+    color: black;
+    font-weight: 400;
+    text-align-last: start;
+    text-align: justify;
+    margin: 15px 0;
+}
+
+.main-blog-description h3 {
+    color: black;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.main-blog-description ul {
+    padding-left: 2rem !important;
+    list-style: disc !important;
+}
+
+.main-blog-description ul li p {
+    margin: 0;
+}
+
+.main-blog-description h4 {
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.main-blog-description p a {
+    color: #d49192;
+}
+
+.main-blog-description .contact-book-form label {
+    color: black;
+    font-weight: 500;
+}
+
+.main-blog-description .contact-book-form button {
+    margin-top: 16px;
+    color: white;
+}
+
+.author-info-blog img {
+    background: #d49192;
+    border-radius: 10px;
+}
+
+.author-info-blog {
+    padding: 15px 25px;
+    border: 2px solid #d49192;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.author-info-blog p {
+    text-align-last: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.side-content-blog h5 {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+.side-content-blog .recent-blog-listing {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.side-content-blog .recent-blog-listing li .recent-blogs-post a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.side-content-blog .recent-blog-listing li .recent-blogs-post a img {
+    width: 180px;
+    border-radius: 10px;
+}
+
+.side-content-blog .recent-blog-listing li {
+    margin-top: 30px;
+}
+
+.recent-blogs-post {
+    padding: 10px;
+    border-radius: 10px;
+    background: #d49192;
+}
