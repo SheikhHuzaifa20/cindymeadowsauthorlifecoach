@@ -1,6 +1,60 @@
 @extends('layouts.main')
 
-@section('title', $blog->title . ' - Cindy Meadows')
+@php
+    $articleSeo = [
+        'privacy-vs-secrecy-children' => [
+            'title' => 'Privacy vs Secrecy: Healthy Boundaries for Children | Guide',
+            'description' => 'Learn how parents and teachers can help children understand privacy, secrecy, and healthy boundaries while building trust, safety, communication and confidence.',
+        ],
+        'children-daydream-creativity-learning' => [
+            'title' => 'Supporting Children Who Daydream | Creativity & Learning Gap',
+            'description' => 'Learn why children daydream, how it reflects creativity or learning gap, and practical ways parents and teachers can offer support, guidance, and understanding.',
+        ],
+        'child-sexual-abuse-warning-signs' => [
+            'title' => '7 Warning Signs of Child Sexual Abuse | Parent Teacher Guide',
+            'description' => 'Learn seven warning signs of child sexual abuse and how parents and teachers can respond with care, safety, support and appropriate professional help as needed.',
+        ],
+        'books-about-childhood-trauma-and-healing' => [
+            'title' => 'Books About Childhood Trauma and Healing: Cindy Meadows Story',
+            'description' => "Books about childhood trauma and healing can offer validation, hope, and insight. See how Cindy Meadows' memoir, I Am Your Daughter, portrays silence and healing.",
+            'alt' => 'Childhood Trauma and Healing',
+        ],
+        'childhood-abuse-and-family-secrets' => [
+            'title' => 'Books About Childhood Abuse and Family Secrets | Cindy Meadows',
+            'description' => "Cindy Meadows' memoir: I Am Your Daughter examines childhood abuse, family secrets, silence, and the difficult path toward healing, trust, and renewed self-worth.",
+            'alt' => 'Childhood Abuse and Family Secrets',
+        ],
+        'trust-and-boundaries-after-trauma' => [
+            'title' => 'Books About Trust and Boundaries After Trauma by Cindy Meadows',
+            'description' => "Cindy Meadows' memoir, I Am Your Daughter, shows how childhood trauma shapes trust and boundaries, and how support can help survivors build safety and self-trust.",
+            'alt' => 'Trust and Boundaries After Trauma',
+        ],
+    ];
+    $requestedArticleSlug = request()->route('slug');
+    $legacyArticleCanonical = [
+        'the-difference-between-privacy-and-secrecy-teaching-children-healthy-boundaries' => 'https://cindymeadowsauthorlifecoach.com/blogs/privacy-vs-secrecy-children',
+        'supporting-children-who-daydream-hidden-creativity-or-learning-gap' => 'https://cindymeadowsauthorlifecoach.com/blogs/children-daydream-creativity-learning',
+        '7-warning-signs-your-child-may-be-experiencing-sexual-abuse-a-guide-for-parents-and-teacher' => 'https://cindymeadowsauthorlifecoach.com/blogs/child-sexual-abuse-warning-signs',
+        'books-about-childhood-trauma-and-healing-stories-of-recovery-and-hope' => 'https://cindymeadowsauthorlifecoach.com/blogs/books-about-childhood-trauma-and-healing',
+        'books-about-childhood-abuse-and-family-secrets' => 'https://cindymeadowsauthorlifecoach.com/blogs/childhood-abuse-and-family-secrets',
+        'books-about-trust-and-boundaries-after-trauma-by-cindy-meadows' => 'https://cindymeadowsauthorlifecoach.com/blogs/trust-and-boundaries-after-trauma',
+    ];
+    $legacyArticleSlugs = [
+        'the-difference-between-privacy-and-secrecy-teaching-children-healthy-boundaries' => 'privacy-vs-secrecy-children',
+        'supporting-children-who-daydream-hidden-creativity-or-learning-gap' => 'children-daydream-creativity-learning',
+        '7-warning-signs-your-child-may-be-experiencing-sexual-abuse-a-guide-for-parents-and-teacher' => 'child-sexual-abuse-warning-signs',
+    ];
+    $articlePath = $legacyArticleSlugs[$requestedArticleSlug] ?? $requestedArticleSlug;
+    $articleMeta = $articleSeo[$articlePath] ?? null;
+@endphp
+
+@section('title', $articleMeta['title'] ?? $blog->title . ' - Cindy Meadows')
+@if ($articleMeta)
+    @section('meta_description', $articleMeta['description'])
+@endif
+@if (isset($legacyArticleCanonical[$requestedArticleSlug]))
+    @section('canonical', $legacyArticleCanonical[$requestedArticleSlug])
+@endif
 
 @section('content')
 
@@ -24,7 +78,7 @@
 
                     {{-- Main Blog Image --}}
                     @if($blog->image)
-                        <img src="{{ asset($blog->image) }}" class="img-fluid" alt="{{ $blog->title }}">
+                        <img src="{{ asset($blog->image) }}" class="img-fluid" alt="{{ $articleMeta['alt'] ?? $blog->title }}">
                     @endif
 
                     {{-- Main Description --}}

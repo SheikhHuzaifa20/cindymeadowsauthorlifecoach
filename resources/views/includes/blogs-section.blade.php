@@ -33,7 +33,7 @@
                                     <h3>{{ $blog->title }}</h3>
                                 </a>
                                 @if ($blog->short_description)
-                                    <p>{{ \Illuminate\Support\Str::limit($blog->short_description, 150) }}</p>
+                                    <p>{{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($blog->short_description, ENT_QUOTES | ENT_HTML5, 'UTF-8')), 150) }}</p>
                                 @elseif($blog->description)
                                     <p>{{ \Illuminate\Support\Str::limit(strip_tags($blog->description), 150) }}</p>
                                 @endif

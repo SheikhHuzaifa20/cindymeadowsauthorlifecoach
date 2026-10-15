@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
-@section('title', 'Contact Us - Cindy Meadows')
+@section('title', 'Contact Cindy Meadows | Author & Life Coach | Book Questions')
+@section('meta_description', 'Contact Cindy Meadows for questions about her book, life coaching, speaking, or her work supporting personal growth, healing, resilience, and meaningful change.')
 
 @section('content')
 

@@ -111,6 +111,7 @@ Route::get('/','HomeController@index')->name('home');
 Route::get('/about-the-author','HomeController@aboutAuthor')->name('about-author');
 Route::get('/about-the-book','HomeController@aboutBook')->name('about-book');
 Route::get('/blogs','HomeController@blogs')->name('blogs');
+Route::get('/blogs/{slug}','HomeController@blogDetail')->name('blog.detail.canonical');
 Route::get('/blog/{slug}','HomeController@blogDetail')->name('blog.detail');
 Route::get('/contact-us','HomeController@contact')->name('contact-us');
 Route::get('/contact','HomeController@contact')->name('contact');

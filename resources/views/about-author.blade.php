@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
-@section('title', 'About the Author - Cindy Meadows')
+@section('title', 'Cindy Meadows | Author of I Am Your Daughter and Life Coach')
+@section('meta_description', 'Learn about Cindy Meadows, author of I Am Your Daughter, and her journey of storytelling, growth, resilience, and life coaching for lasting change and healing.')
 
 @section('content')
 

@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
-@section('title', 'About the Book - I Am Your Daughter by Cindy Meadows')
+@section('title', 'I Am Your Daughter by Cindy Meadows | Memoir & Healing Story')
+@section('meta_description', 'Learn about I Am Your Daughter by Cindy Meadows, an inspiring memoir of family, childhood, resilience, identity, healing, and finding strength through hardship.')
 
 @section('content')
 

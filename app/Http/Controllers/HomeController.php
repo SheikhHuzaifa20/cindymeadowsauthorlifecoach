@@ -88,10 +88,20 @@ class HomeController extends Controller
 
     public function blogDetail($slug)
     {
+        $slugAliases = [
+            'privacy-vs-secrecy-children' => 'the-difference-between-privacy-and-secrecy-teaching-children-healthy-boundaries',
+            'children-daydream-creativity-learning' => 'supporting-children-who-daydream-hidden-creativity-or-learning-gap',
+            'child-sexual-abuse-warning-signs' => '7-warning-signs-your-child-may-be-experiencing-sexual-abuse-a-guide-for-parents-and-teacher',
+            'books-about-childhood-trauma-and-healing' => 'books-about-childhood-trauma-and-healing-stories-of-recovery-and-hope',
+            'childhood-abuse-and-family-secrets' => 'books-about-childhood-abuse-and-family-secrets',
+            'trust-and-boundaries-after-trauma' => 'books-about-trust-and-boundaries-after-trauma-by-cindy-meadows',
+        ];
+        $lookupSlug = $slugAliases[$slug] ?? $slug;
+
         $blog = Blog::where('status', 1)
             ->get()
-            ->first(function ($b) use ($slug) {
-                return \Illuminate\Support\Str::slug($b->title) === $slug;
+            ->first(function ($b) use ($lookupSlug) {
+                return \Illuminate\Support\Str::slug($b->title) === $lookupSlug;
             });
 
         if (!$blog) {

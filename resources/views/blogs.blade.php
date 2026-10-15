@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
-@section('title', 'Blogs & Articles - Cindy Meadows')
+@section('title', 'Cindy Meadows Blogs | Parenting & Life Coaching Insights')
+@section('meta_description', 'Insights from Cindy Meadows on parenting, childhood, healthy boundaries, personal growth, life coaching, resilience, and topics that support families, growth.')
 
 @section('content')
 
