@@ -95,6 +95,9 @@ class HomeController extends Controller
             'books-about-childhood-trauma-and-healing' => 'books-about-childhood-trauma-and-healing-stories-of-recovery-and-hope',
             'childhood-abuse-and-family-secrets' => 'books-about-childhood-abuse-and-family-secrets',
             'trust-and-boundaries-after-trauma' => 'books-about-trust-and-boundaries-after-trauma-by-cindy-meadows',
+            'books-about-childhood-family-relationships' => 'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home',
+            'healing-the-father-wound-and-rebuilding-trust' => 'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma',
+            'childhood-family-trauma-books-for-healing' => 'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors',
         ];
         $lookupSlug = $slugAliases[$slug] ?? $slug;
 

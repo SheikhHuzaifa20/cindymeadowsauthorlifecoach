@@ -2,18 +2,6 @@
 
 @php
     $articleSeo = [
-        'privacy-vs-secrecy-children' => [
-            'title' => 'Privacy vs Secrecy: Healthy Boundaries for Children | Guide',
-            'description' => 'Learn how parents and teachers can help children understand privacy, secrecy, and healthy boundaries while building trust, safety, communication and confidence.',
-        ],
-        'children-daydream-creativity-learning' => [
-            'title' => 'Supporting Children Who Daydream | Creativity & Learning Gap',
-            'description' => 'Learn why children daydream, how it reflects creativity or learning gap, and practical ways parents and teachers can offer support, guidance, and understanding.',
-        ],
-        'child-sexual-abuse-warning-signs' => [
-            'title' => '7 Warning Signs of Child Sexual Abuse | Parent Teacher Guide',
-            'description' => 'Learn seven warning signs of child sexual abuse and how parents and teachers can respond with care, safety, support and appropriate professional help as needed.',
-        ],
         'books-about-childhood-trauma-and-healing' => [
             'title' => 'Books About Childhood Trauma and Healing: Cindy Meadows Story',
             'description' => "Books about childhood trauma and healing can offer validation, hope, and insight. See how Cindy Meadows' memoir, I Am Your Daughter, portrays silence and healing.",
@@ -29,6 +17,36 @@
             'description' => "Cindy Meadows' memoir, I Am Your Daughter, shows how childhood trauma shapes trust and boundaries, and how support can help survivors build safety and self-trust.",
             'alt' => 'Trust and Boundaries After Trauma',
         ],
+        'books-about-childhood-family-relationships' => [
+            'title' => 'Books About Childhood Family Relationships and Healing Stories',
+            'description' => "Books about childhood family relationships reveal trauma, conflict, and healing through a child's voice in Cindy Meadows' memoir I Am Your Daughter with hope.",
+            'alt' => 'Nostalgia’s Quiet Corner',
+        ],
+        'healing-the-father-wound-and-rebuilding-trust' => [
+            'title' => 'Father–Daughter Relationships in Adulthood: Healing Bonds',
+            'description' => 'Books on father–daughter relationships in adulthood reveal how childhood abuse and betrayal affect trust, boundaries, identity, and healing across adult life.',
+            'alt' => 'The Healing of Memories',
+        ],
+        'childhood-family-trauma-books-for-healing' => [
+            'title' => 'Childhood Family Trauma Books That Validate, Heal and Inspire',
+            'description' => 'Popular books about childhood family trauma can validate painful experiences, explain lasting wounds, and offer survivors hope, healing, and a way forward.',
+            'alt' => 'In Search of Peace',
+        ],
+        'childhood-memoir-books' => [
+            'title' => 'Childhood Memoir Books: Stories of Growth, Memory and Family',
+            'description' => 'These childhood memoir books share stories of family, identity, and resilience. Cindy Meadows’ I Am Your Daughter shows how early experiences shape adult lives.',
+            'alt' => 'Childhood Memoir Books',
+        ],
+        'books-about-social-injustice' => [
+            'title' => 'Books About Social Injustice: Childhood Views of Segregation',
+            'description' => 'Cindy Meadows’ I Am Your Daughter shows how a child confronts racial segregation, questions family prejudice, and reveals injustice’s lasting impact in America.',
+            'alt' => 'Books About Social Injustice',
+        ],
+        'books-about-girlhood' => [
+            'title' => 'Books About Girlhood: Family Expectations Shape Girls’ Lives',
+            'description' => 'Cindy Meadows’ I Am Your Daughter depicts girlhood shaped by family expectations, emotional neglect, and a daughter’s search for identity, voice, and belonging.',
+            'alt' => 'Books About Girlhood',
+        ],
     ];
     $requestedArticleSlug = request()->route('slug');
     $legacyArticleCanonical = [
@@ -38,11 +56,20 @@
         'books-about-childhood-trauma-and-healing-stories-of-recovery-and-hope' => 'https://cindymeadowsauthorlifecoach.com/blogs/books-about-childhood-trauma-and-healing',
         'books-about-childhood-abuse-and-family-secrets' => 'https://cindymeadowsauthorlifecoach.com/blogs/childhood-abuse-and-family-secrets',
         'books-about-trust-and-boundaries-after-trauma-by-cindy-meadows' => 'https://cindymeadowsauthorlifecoach.com/blogs/trust-and-boundaries-after-trauma',
+        'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home' => 'https://cindymeadowsauthorlifecoach.com/blogs/books-about-childhood-family-relationships',
+        'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma' => 'https://cindymeadowsauthorlifecoach.com/blogs/healing-the-father-wound-and-rebuilding-trust',
+        'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors' => 'https://cindymeadowsauthorlifecoach.com/blogs/childhood-family-trauma-books-for-healing',
     ];
     $legacyArticleSlugs = [
         'the-difference-between-privacy-and-secrecy-teaching-children-healthy-boundaries' => 'privacy-vs-secrecy-children',
         'supporting-children-who-daydream-hidden-creativity-or-learning-gap' => 'children-daydream-creativity-learning',
         '7-warning-signs-your-child-may-be-experiencing-sexual-abuse-a-guide-for-parents-and-teacher' => 'child-sexual-abuse-warning-signs',
+        'books-about-childhood-trauma-and-healing-stories-of-recovery-and-hope' => 'books-about-childhood-trauma-and-healing',
+        'books-about-childhood-abuse-and-family-secrets' => 'childhood-abuse-and-family-secrets',
+        'books-about-trust-and-boundaries-after-trauma-by-cindy-meadows' => 'trust-and-boundaries-after-trauma',
+        'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home' => 'books-about-childhood-family-relationships',
+        'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma' => 'healing-the-father-wound-and-rebuilding-trust',
+        'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors' => 'childhood-family-trauma-books-for-healing',
     ];
     $articlePath = $legacyArticleSlugs[$requestedArticleSlug] ?? $requestedArticleSlug;
     $articleMeta = $articleSeo[$articlePath] ?? null;
@@ -58,6 +85,13 @@
 
 @section('content')
 
+<style>
+    .main-blog-description h3 {
+        color: black;
+        font-size: 40px;
+        font-weight: 400;
+    }
+</style>
 <section class="banner inner-banner blog-banner">
     <div class="container">
         <div class="row">
