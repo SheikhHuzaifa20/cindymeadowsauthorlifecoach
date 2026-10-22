@@ -49,7 +49,7 @@ class HomeController extends Controller
     public function index()
     {
         $page = DB::table('pages')->where('id', 1)->first();
-        $blogs = Blog::where('status', 1)->orderBy('sort_order')->get();
+        $blogs = Blog::where('status', 1)->whereIn('slug', Blog::ALLOWED_SLUGS)->orderBy('sort_order')->get();
         $banner = DB::table('banners')->where('id', 1)->first();
         $testimonial = DB::table('testimonial')->where('status', 1)->get();
         $page = DB::table('pages')->where('id', 1)->first();
@@ -79,7 +79,7 @@ class HomeController extends Controller
 
     public function blogs()
     {
-        $blogs = Blog::where('status', 1)->orderBy('sort_order')->get();
+        $blogs = Blog::where('status', 1)->whereIn('slug', Blog::ALLOWED_SLUGS)->orderBy('sort_order')->get();
         $page = DB::table('pages')->where('id', 3)->first();
         $banner = DB::table('banners')->where('id', 1)->first();
 
@@ -88,24 +88,9 @@ class HomeController extends Controller
 
     public function blogDetail($slug)
     {
-        $slugAliases = [
-            'privacy-vs-secrecy-children' => 'the-difference-between-privacy-and-secrecy-teaching-children-healthy-boundaries',
-            'children-daydream-creativity-learning' => 'supporting-children-who-daydream-hidden-creativity-or-learning-gap',
-            'child-sexual-abuse-warning-signs' => '7-warning-signs-your-child-may-be-experiencing-sexual-abuse-a-guide-for-parents-and-teacher',
-            'books-about-childhood-trauma-and-healing' => 'books-about-childhood-trauma-and-healing-stories-of-recovery-and-hope',
-            'childhood-abuse-and-family-secrets' => 'books-about-childhood-abuse-and-family-secrets-stories-of-silence-and-healing',
-            'trust-and-boundaries-after-trauma' => 'books-about-trust-and-boundaries-after-trauma-a-journey-toward-healing',
-            'childhood-memoir-books' => 'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home',
-            'books-about-girlhood' => 'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma',
-            'books-about-social-injustice' => 'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors',
-        ];
-        $lookupSlug = $slugAliases[$slug] ?? $slug;
+        abort_unless(in_array($slug, Blog::ALLOWED_SLUGS, true), 404);
 
-        $blog = Blog::where('status', 1)
-            ->get()
-            ->first(function ($b) use ($lookupSlug) {
-                return \Illuminate\Support\Str::slug($b->title) === $lookupSlug;
-            });
+        $blog = Blog::where('status', 1)->where('slug', $slug)->first();
 
         if (!$blog) {
             abort(404);

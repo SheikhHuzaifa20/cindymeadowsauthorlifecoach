@@ -81,9 +81,9 @@
 <body>
 
     <style>
-        .banner {
-            background-image: url({{ asset($banner->image) }});
-        }
+        @if (!empty($banner) && !empty($banner->image))
+            .banner { background-image: url('{{ asset($banner->image) }}'); }
+        @endif
     </style>
 
     @include('layouts.front.header')

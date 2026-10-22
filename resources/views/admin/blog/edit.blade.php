@@ -57,6 +57,32 @@
                                             </div>
                                         </div>
 
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="slug">Slug <span class="text-danger">*</span></label>
+                                                <select class="form-control" required name="slug" id="slug">
+                                                    <option value="">Select slug</option>
+                                                    @foreach (\App\Models\Blog::ALLOWED_SLUGS as $slugOption)
+                                                        <option value="{{ $slugOption }}" @selected(old('slug', $blog->slug) === $slugOption)>{{ $slugOption }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="meta_title">Meta Title</label>
+                                                <input class="form-control" name="meta_title" type="text" id="meta_title" maxlength="255" value="{{ old('meta_title', $blog->meta_title) }}">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="meta_description">Meta Description</label>
+                                                <textarea class="form-control" name="meta_description" id="meta_description" rows="3" maxlength="1000">{{ old('meta_description', $blog->meta_description) }}</textarea>
+                                            </div>
+                                        </div>
+
                                         {{-- Short Description --}}
                                         <div class="col-md-12">
                                             <div class="form-group">
