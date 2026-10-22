@@ -56,12 +56,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="slug">Slug <span class="text-danger">*</span></label>
-                                                <select class="form-control" required name="slug" id="slug">
-                                                    <option value="">Select slug</option>
-                                                    @foreach (\App\Models\Blog::ALLOWED_SLUGS as $slugOption)
-                                                        <option value="{{ $slugOption }}" @selected(old('slug') === $slugOption)>{{ $slugOption }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <input class="form-control" required name="slug" type="text" id="slug" value="{{ old('slug') }}" placeholder="Enter one of the approved blog slugs" pattern="[a-z0-9]+(?:-[a-z0-9]+)*">
                                             </div>
                                         </div>
 
