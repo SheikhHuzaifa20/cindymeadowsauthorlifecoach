@@ -16,7 +16,7 @@
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="blog-main wow fadeInUp" data-wow-delay="0.2s">
                             <div class="blog-img">
-                                <a href="{{ route('blog.detail', \Illuminate\Support\Str::slug($blog->title)) }}">
+                                <a href="{{ route('blog.detail', $blog->slug) }}">
                                     @if ($blog->image)
                                         <img src="{{ asset($blog->image) }}" class="img-fluid" alt="{{ $blog->title }}">
                                     @else
@@ -29,7 +29,7 @@
                                 <h5>{{ $blog->created_at->format('d') }}
                                     <span class="d-block">{{ $blog->created_at->format('M') }}</span>
                                 </h5>
-                                <a href="{{ route('blog.detail', \Illuminate\Support\Str::slug($blog->title)) }}">
+                                <a href="{{ route('blog.detail', $blog->slug) }}">
                                     <h3>{{ $blog->title }}</h3>
                                 </a>
                                 @if ($blog->short_description)
@@ -37,7 +37,7 @@
                                 @elseif($blog->description)
                                     <p>{{ \Illuminate\Support\Str::limit(strip_tags($blog->description), 150) }}</p>
                                 @endif
-                                <a href="{{ route('blog.detail', \Illuminate\Support\Str::slug($blog->title)) }}"
+                                <a href="{{ route('blog.detail', $blog->slug) }}"
                                     class="btn btn-web drk-btn">Read More</a>
                             </div>
                         </div>

@@ -203,7 +203,7 @@
                                     <p class="mb-1"><strong>Sections:</strong> {{ $blog->sections->count() }} section(s) added</p>
                                     <p class="mb-0"><small>Use <strong>"+ Add New Section"</strong> to add headings, paragraphs, images, or videos to this blog post's detail page.</small></p>
                                 </div>
-                                <a href="{{ route('blog.detail', \Illuminate\Support\Str::slug($blog->title)) }}" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-1">
+                                <a href="{{ route('blog.detail', $blog->slug) }}" target="_blank" class="btn btn-outline-secondary btn-sm w-100 mt-1">
                                     <i class="la la-eye"></i> Preview Blog Post
                                 </a> --}}
                             </div>

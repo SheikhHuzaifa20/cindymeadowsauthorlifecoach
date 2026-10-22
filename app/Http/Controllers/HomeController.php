@@ -93,11 +93,11 @@ class HomeController extends Controller
             'children-daydream-creativity-learning' => 'supporting-children-who-daydream-hidden-creativity-or-learning-gap',
             'child-sexual-abuse-warning-signs' => '7-warning-signs-your-child-may-be-experiencing-sexual-abuse-a-guide-for-parents-and-teacher',
             'books-about-childhood-trauma-and-healing' => 'books-about-childhood-trauma-and-healing-stories-of-recovery-and-hope',
-            'childhood-abuse-and-family-secrets' => 'books-about-childhood-abuse-and-family-secrets',
-            'trust-and-boundaries-after-trauma' => 'books-about-trust-and-boundaries-after-trauma-by-cindy-meadows',
-            'books-about-childhood-family-relationships' => 'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home',
-            'healing-the-father-wound-and-rebuilding-trust' => 'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma',
-            'childhood-family-trauma-books-for-healing' => 'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors',
+            'childhood-abuse-and-family-secrets' => 'books-about-childhood-abuse-and-family-secrets-stories-of-silence-and-healing',
+            'trust-and-boundaries-after-trauma' => 'books-about-trust-and-boundaries-after-trauma-a-journey-toward-healing',
+            'childhood-memoir-books' => 'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home',
+            'books-about-girlhood' => 'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma',
+            'books-about-social-injustice' => 'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors',
         ];
         $lookupSlug = $slugAliases[$slug] ?? $slug;
 

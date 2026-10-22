@@ -54,22 +54,22 @@
         'supporting-children-who-daydream-hidden-creativity-or-learning-gap' => 'https://cindymeadowsauthorlifecoach.com/blogs/children-daydream-creativity-learning',
         '7-warning-signs-your-child-may-be-experiencing-sexual-abuse-a-guide-for-parents-and-teacher' => 'https://cindymeadowsauthorlifecoach.com/blogs/child-sexual-abuse-warning-signs',
         'books-about-childhood-trauma-and-healing-stories-of-recovery-and-hope' => 'https://cindymeadowsauthorlifecoach.com/blogs/books-about-childhood-trauma-and-healing',
-        'books-about-childhood-abuse-and-family-secrets' => 'https://cindymeadowsauthorlifecoach.com/blogs/childhood-abuse-and-family-secrets',
-        'books-about-trust-and-boundaries-after-trauma-by-cindy-meadows' => 'https://cindymeadowsauthorlifecoach.com/blogs/trust-and-boundaries-after-trauma',
-        'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home' => 'https://cindymeadowsauthorlifecoach.com/blogs/books-about-childhood-family-relationships',
-        'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma' => 'https://cindymeadowsauthorlifecoach.com/blogs/healing-the-father-wound-and-rebuilding-trust',
-        'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors' => 'https://cindymeadowsauthorlifecoach.com/blogs/childhood-family-trauma-books-for-healing',
+        'books-about-childhood-abuse-and-family-secrets-stories-of-silence-and-healing' => 'https://cindymeadowsauthorlifecoach.com/blogs/childhood-abuse-and-family-secrets',
+        'books-about-trust-and-boundaries-after-trauma-a-journey-toward-healing' => 'https://cindymeadowsauthorlifecoach.com/blogs/trust-and-boundaries-after-trauma',
+        'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home' => 'https://cindymeadowsauthorlifecoach.com/blogs/childhood-memoir-books',
+        'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma' => 'https://cindymeadowsauthorlifecoach.com/blogs/books-about-girlhood',
+        'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors' => 'https://cindymeadowsauthorlifecoach.com/blogs/books-about-social-injustice',
     ];
     $legacyArticleSlugs = [
         'the-difference-between-privacy-and-secrecy-teaching-children-healthy-boundaries' => 'privacy-vs-secrecy-children',
         'supporting-children-who-daydream-hidden-creativity-or-learning-gap' => 'children-daydream-creativity-learning',
         '7-warning-signs-your-child-may-be-experiencing-sexual-abuse-a-guide-for-parents-and-teacher' => 'child-sexual-abuse-warning-signs',
         'books-about-childhood-trauma-and-healing-stories-of-recovery-and-hope' => 'books-about-childhood-trauma-and-healing',
-        'books-about-childhood-abuse-and-family-secrets' => 'childhood-abuse-and-family-secrets',
-        'books-about-trust-and-boundaries-after-trauma-by-cindy-meadows' => 'trust-and-boundaries-after-trauma',
-        'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home' => 'books-about-childhood-family-relationships',
-        'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma' => 'healing-the-father-wound-and-rebuilding-trust',
-        'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors' => 'childhood-family-trauma-books-for-healing',
+        'books-about-childhood-abuse-and-family-secrets-stories-of-silence-and-healing' => 'childhood-abuse-and-family-secrets',
+        'books-about-trust-and-boundaries-after-trauma-a-journey-toward-healing' => 'trust-and-boundaries-after-trauma',
+        'books-about-childhood-family-relationships-the-innocent-voice-of-a-child-in-a-troubled-home' => 'childhood-memoir-books',
+        'from-abuse-to-trust-books-on-father-daughter-relationships-in-adulthood-for-survivors-of-childhood-trauma' => 'books-about-girlhood',
+        'popular-books-about-childhood-family-trauma-a-comprehensive-reading-guide-for-survivors' => 'books-about-social-injustice',
     ];
     $articlePath = $legacyArticleSlugs[$requestedArticleSlug] ?? $requestedArticleSlug;
     $articleMeta = $articleSeo[$articlePath] ?? null;
@@ -88,7 +88,7 @@
 <style>
     .main-blog-description h3 {
         color: black;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 400;
     }
 </style>
@@ -206,7 +206,7 @@
                         @foreach($recentBlogs as $recent)
                             <li>
                                 <div class="recent-blogs-post">
-                                    <a href="{{ route('blog.detail', \Illuminate\Support\Str::slug($recent->title)) }}">
+                                    <a href="{{ route('blog.detail', $recent->slug) }}">
                                         @if($recent->image)
                                             <img src="{{ asset($recent->image) }}" class="img-fluid" alt="{{ $recent->title }}">
                                         @else
